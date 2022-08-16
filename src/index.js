@@ -12,7 +12,7 @@ export default class Canvas extends DrawCore {
     constructor(options){
         super();
 
-        this.create(options.canvasName, options.sizes, {styleClasses: options.styleClasses})
+        options.customCanvas ? null : this.create(options.canvasName, options.sizes, {styleClasses: options.styleClasses});
         this.bind(options.canvasName)
     }
 
